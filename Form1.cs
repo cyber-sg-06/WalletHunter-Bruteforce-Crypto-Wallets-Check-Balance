@@ -177,7 +177,7 @@ namespace WalletHunter
                         mnemo[i] = GenerateMnemonic();
                         var wallet = new Wallet(mnemo[i], "");
                         var account = wallet.GetAccount(0);
-                        address[i] = account.Address;
+                        address[i] = new Account(account.PrivateKey);
                         privatekey[i] = account.PrivateKey;
                         wallet = null;
                         account = null;
@@ -948,7 +948,7 @@ namespace WalletHunter
                     mnemonicBox.Items.Add(mnemo[i]);
                     var wallet = new Wallet(mnemo[i], "");
                     var account = wallet.GetAccount(0);
-                    address[i] = account.Address;
+                    address[i] = new Account(account.PrivateKey);
                     privatekey[i] = account.PrivateKey;
                     addressBox.Items.Add(address[i]);
                     privatekeyBox.Items.Add(privatekey[i]);
@@ -1086,7 +1086,7 @@ namespace WalletHunter
                     mnemonicBox1.Items.Add(mnemo[i]);
                     var wallet = new Wallet(mnemo[i], "");
                     var account = wallet.GetAccount(0);
-                    address[i] = account.Address;
+                    address[i] = new Account(account.PrivateKey);
                     privatekey[i] = account.PrivateKey;
                     addressBox1.Items.Add(address[i]);
                     privatekeyBox1.Items.Add(privatekey[i]);
@@ -1233,7 +1233,7 @@ namespace WalletHunter
                     mnemonicBox2.Items.Add(mnemo[i]);
                     var wallet = new Wallet(mnemo[i], "");
                     var account = wallet.GetAccount(0);
-                    address[i] = account.Address;
+                    address[i] = new Account(account.PrivateKey);
                     privatekey[i] = account.PrivateKey;
                     addressBox2.Items.Add(address[i]);
                     privatekeyBox2.Items.Add(privatekey[i]);
@@ -1375,7 +1375,7 @@ namespace WalletHunter
                     mnemonicBox3.Items.Add(mnemo[i]);
                     var wallet = new Wallet(mnemo[i], "");
                     var account = wallet.GetAccount(0);
-                    address[i] = account.Address;
+                    address[i] = new Account(account.PrivateKey);
                     privatekey[i] = account.PrivateKey;
                     addressBox3.Items.Add(address[i]);
                     privatekeyBox3.Items.Add(privatekey[i]);
